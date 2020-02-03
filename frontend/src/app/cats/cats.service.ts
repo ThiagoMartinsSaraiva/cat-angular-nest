@@ -13,4 +13,8 @@ export class CatsService {
   public getAll(): Observable<Cat[]> {
     return this.httpClient.get<Cat[]>('http://localhost:3000/cats')
   }
+
+  public remove(_id: string): Observable<Cat> {
+    return this.httpClient.delete<Cat>(`http://localhost:3000/cats/${_id}`);
+  }
 }

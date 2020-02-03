@@ -23,8 +23,6 @@ export class CatsService {
   }
 
   async delete(_id: Types.ObjectId): Promise<string> {
-    const deletedCat = this.catModel.findById(_id)
-    deletedCat.deleteOne({_id})
-    return 'Removido com sucesso';
+    return this.catModel.deleteOne({_id})
   }
 }

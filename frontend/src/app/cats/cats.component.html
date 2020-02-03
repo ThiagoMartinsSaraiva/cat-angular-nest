@@ -1,0 +1,8 @@
+<div *ngFor="let cat of cats">
+  <span class="cat-name cat">{{ cat.name }}</span>
+  <span class="cat-color cat">{{ cat.color }}</span>
+  <span class="cat-age cat">{{ cat.age }}</span>
+  <span class="cat">
+    <button class="btn" (click)="removeCat(cat._id)">Remove</button>
+  </span>
+</div>

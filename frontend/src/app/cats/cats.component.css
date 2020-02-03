@@ -1,0 +1,38 @@
+div {
+  box-shadow: .8px .8px 1px 1px black;
+  width: fit-content;
+  border-radius: 3px;
+}
+
+span[class^="cat"] {
+  display: inline-block;
+  margin: 10px;
+}
+
+span[class^="cat"]:not(:last-of-type):after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  height: 15px;
+  width: 0px;
+  border-right: 1px solid black;
+}
+
+.cat {
+  color: black;
+  font-size: 25px;
+  font-family: sans-serif;
+  text-shadow: .5px .5px 1px #0005;
+}
+
+.btn {
+  margin: 0;
+  padding: 3px;
+  font-size: 25px;
+  border: 0;
+  outline: 0;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+}
