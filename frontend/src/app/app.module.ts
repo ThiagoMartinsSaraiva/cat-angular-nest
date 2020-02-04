@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatsService } from './cats/cats.service';
 import { CatsComponent } from './cats/cats.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatsComponent
+    CatsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

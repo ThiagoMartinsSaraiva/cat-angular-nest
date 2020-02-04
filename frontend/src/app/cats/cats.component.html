@@ -1,12 +1,16 @@
-<table>
+<table cellspacing="10">
   <tr>
     <th *ngFor="let column of cats[0] | keyvalue">
-      <span *ngIf="column.key != '_id' && column.key != '__v'">{{ column.key }}</span>
+      <span>{{ column.key }}</span>
     </th>
+    <th>Action</th>
   </tr>
   <tr *ngFor="let cat of cats">
     <td *ngFor="let column of cat | keyvalue">
-      <span *ngIf="column.key != '_id' && column.key != '__v'">{{ column.value }}</span>
+      <span>{{ column.value }}</span>
+    </td>
+    <td>
+      <button (click)="removeCat(cat._id)">Remove</button>
     </td>
   </tr>
 </table>
