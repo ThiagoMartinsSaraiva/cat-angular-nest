@@ -1,4 +1,4 @@
-<table cellspacing="10">
+<table cellspacing="10" *ngIf="!isLoading; else loading">
   <tr>
     <th *ngFor="let column of cats[0] | keyvalue">
       <span>{{ column.key }}</span>
@@ -14,3 +14,7 @@
     </td>
   </tr>
 </table>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
