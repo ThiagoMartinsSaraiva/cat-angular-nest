@@ -1,18 +1,23 @@
-<table cellspacing="10" *ngIf="!isLoading; else loading">
-  <tr>
-    <th *ngFor="let column of cats[0] | keyvalue">
-      <span>{{ column.key }}</span>
-    </th>
-    <th>Action</th>
-  </tr>
-  <tr *ngFor="let cat of cats">
-    <td *ngFor="let column of cat | keyvalue">
-      <span>{{ column.value }}</span>
-    </td>
-    <td>
-      <button (click)="removeCat(cat._id)">Remove</button>
-    </td>
-  </tr>
+<h2>Cats</h2>
+<table *ngIf="!isLoading; else loading">
+  <thead>
+    <tr>
+      <th *ngFor="let column of cats[0] | keyvalue">
+        <span>{{ column.key }}</span>
+      </th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cat of cats">
+      <td *ngFor="let column of cat | keyvalue">
+        <span>{{ column.value }}</span>
+      </td>
+      <td class="action">
+        <button (click)="removeCat(cat._id)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <ng-template #loading>
